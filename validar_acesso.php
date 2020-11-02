@@ -2,17 +2,14 @@
    
    session_start(); 
 
-   require_once('bd.php');
+   include('bd.php');
 
   $usuario = $_POST['usuario'];
   $senha = md5($_POST['senha']);
 
   $sql = " Select id,usuario,email from usuario where usuario = '$usuario' and senha = '$senha' ";
-
-  $objbd = new bd();
-  $link = $objbd->conecta_mysql();
-
- $resultado_id = mysqli_query($link, $sql);
+  
+ $resultado_id = mysqli_query($con, $sql);
 
     if($resultado_id){
 

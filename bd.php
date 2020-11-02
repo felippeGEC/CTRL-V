@@ -1,35 +1,26 @@
 <?php
 
-class bd{
-	     //host
-        private $host = 'localhost';
+    //host
+    $host = 'localhost';
 
-        //usuario
-        private $usuario = 'root';
+    //usuario
+    $usuario = 'root';
 
-        //senha
-        private $senha = '';
+    //senha
+    $senha = '';
 
-        //banco de dados
-        private $database = 'ctrlv';
+    //banco de dados
+    $database = 'ctrlv';
 
-        public function conecta_mysql(){
+    
 
-            //criar conexao
-            $con = mysqli_connect($this->host, $this->usuario, $this->senha, $this->database);
+    //criar conexao
+    $con = mysqli_connect($host, $usuario, $senha, $database);
+    
+    if(!$con){
+        die("Falha ao conectar com o bd: ".mysqli_connect_error());
+    }
+	
 
-            //ajustar o charset de comunicação entre a aplicação e o banco de dados
-            mysqli_set_charset($con, 'utf8');
-
-            //verificar se houve erro de conexão
-            if(mysqli_connect_error()){
-                echo 'Erro ao tentar se conectar com BD MySQL: ' . mysqli_connect_error();
-            }
-
-            return $con;
-	}
-
-
-}
 
 ?>
