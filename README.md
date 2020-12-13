@@ -13,9 +13,9 @@
 <h2>Tecnologias</h2>
 <ul>
   <li>Linguagem: PHP</li>
-  <li>IDE: SublimeText</li>
-  <li>Back-end: PHP</li>
-  <li>Front-end: CSS e Bootstrap</li>
+  <li>IDE: Visual Studio Code </li>
+  <li>Back-end: PHP e Jquery</li>
+  <li>Front-end: CSS, Bootstrap, JavaScript</li>
   <li>Banco de dados Relacional: Mysql</li>
 <ul>
 <h2>Status do Projeto<h2>
